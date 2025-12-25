@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #dff0ff, #a8d6ff);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+
+    box-sizing: border-box;
+
+    /* biar aman di HP */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* WRAPPER */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.87);
+    backdrop-filter: blur(12px);
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 26px;
+    color: #0D47A1;
+    margin-bottom: 3px;
+}
+
+.sub {
+    font-size: 14px;
+    color: #1976D2;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #0D47A1;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1.5px solid #90CAF9;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: .25s ease;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 6px rgba(33,150,243,0.4);
+}
+
+/* BUTTON */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #1E88E5;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .25s ease;
+}
+
+.btn:hover {
+    background: #1565C0;
+    transform: translateY(-2px);
+}
+
+.regis-text {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #0D47A1;
+}
+
+.regis-text a {
+    color: #1565C0;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.regis-text a:hover {
+    text-decoration: underline;
+}
+
+/* 🔥 RESPONSIVE FIX MOBILE */
+@media(max-width: 480px) {
+    .card {
+        padding: 28px 22px;  /* biar tidak mepet edge HP */
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .btn {
+        font-size: 15px;
+        padding: 11px;
+    }
+}

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --biru: #1e88e5;
+    --biru-muda: #90caf9;
+    --shadow: rgba(0,0,0,0.12);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #e8f4ff, #cfe8ff);
+}
+
+/* WRAPPER FULL CENTER */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* LOGO */
+.logo-paud {
+    width: 90px;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease;
+}
+
+/* CARD */
+.hero-card {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 750px;
+    padding: 40px;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px var(--shadow);
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+
+/* TITLE */
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d47a1;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+/* SUBTITLE */
+.subtitle {
+    font-size: 16px;
+    color: #1565c0;
+    margin-bottom: 25px;
+}
+
+/* IMAGE */
+.hero-img {
+    width: 65%;
+    max-width: 290px;
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.hero-img:hover {
+    transform: scale(1.04);
+}
+
+/* BUTTON */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+/* Primary */
+.primary {
+    background: var(--biru);
+    color: white;
+}
+
+.primary:hover {
+    background: #0b61c5;
+    transform: translateY(-2px);
+}
+
+/* Outline */
+.outline {
+    border: 2px solid var(--biru);
+    color: var(--biru);
+}
+
+.outline:hover {
+    background: var(--biru);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .title { font-size: 22px; }
+    .subtitle { font-size: 14px; }
+    .hero-img { width: 80%; }
+    .btn-group { flex-direction: column; }
+    .btn { width: 100%; max-width: 260px; margin: auto; }
+}
